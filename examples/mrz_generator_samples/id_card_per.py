@@ -10,14 +10,14 @@ sys.path.append(realpath(join(dirname(__file__), pardir, pardir)))
 from mrz.generator.td1 import TD1CodeGenerator
 from examples.functions.functions import open_image
 
-print(TD1CodeGenerator("I",               # Document type   Normally 'I' or 'ID' for id cards
-                       "PER",             # Country         3 letters code or country name
-                       "70275722",        # Document number
-                       "890612",          # Birth date      YYMMDD
-                       "M",               # Genre           Male: 'M', Female: 'F' or Undefined 'X'
-                       "210716",          # Expiry date     YYMMDD
-                       "PER",             # Nationality
-                       "Cárdenas",        # Surname         Special characters will be transliterated
-                       "Jorge Anthony"))  # Given name(s)   Special characters will be transliterated
+print(TD1CodeGenerator("I",               # Document type   ID
+                       "PER",             # Country         FRA
+                       "70275722",        # Document number as658975
+                       "890612",          # Birth date      07031992
+                       "M",               # Genre           Male: M
+                       "210716",          # Expiry date     07031892
+                       "PER",             # Nationality     
+                       "Cárdenas",        # Surname         SURAF
+                       "Jorge Anthony"))  # Given name(s)   VELİ
 
 open_image("id_cards", "Peru.png")
